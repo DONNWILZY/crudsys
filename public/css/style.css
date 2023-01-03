@@ -57,8 +57,11 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
- /* background-color: #fff; */
- background-image: url('../images/bg.jpg');
+   
+ background-image: url('../images/our_services.jpg') !important;
+ background-repeat: no-repeat !important;
+ background-size: cover !important;
+
 }
 
 [tabindex="-1"]:focus {
@@ -1933,7 +1936,9 @@ textarea.form-control {
 
 .was-validated .custom-control-input:invalid:checked ~ .custom-control-label::before, .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
   border-color: #e4606d;
-  background-color: #e4606d; }
+ /* background-color: #e4606d; */
+  background: url('../images/bg.jpg');
+ }
 
 .was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
