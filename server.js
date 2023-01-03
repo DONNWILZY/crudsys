@@ -14,7 +14,10 @@ mongoose.connect('mongodb://127.0.0.1:27017', (err)=>{
     else console.log('CAN NOT CONNECT TO DB');
 })
 
+// set ejs views
 app.set('view engine', 'ejs');
+
+//public folder for external resources
 app.use(express.static('public'));
 
 //body parser 
