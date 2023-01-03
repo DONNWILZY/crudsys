@@ -15,8 +15,16 @@ mongoose.connect('mongodb://127.0.0.1:27017', (err)=>{
 })
 
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
+
+//body parser 
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
 
 const homepageRoutes = require('./routers/homepage')
+
+
 
 //roroute and views for testing
 app.use('/', homepageRoutes)
