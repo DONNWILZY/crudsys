@@ -1,7 +1,7 @@
 const mongoos = require('mogoose');
 const schema = mongoos.Schema;
 let memberschema = new schema({
-    fullname: {
+    name: {
         type: String
     },
     email: {
@@ -15,4 +15,4 @@ let memberschema = new schema({
     },
 })
 
-module.exports = mongoos.model('team', memberschema)
+module.exports = mongoos.model('member', memberschema)

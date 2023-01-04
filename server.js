@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 
 
 //data base connection
-mongoose.connect('mongodb://127.0.0.1:27017', (err)=>{
+mongoose.connect('mongodb://127.0.0.1:27017/testing', (err)=>{
     if(!err)console.log('db connected');
     else console.log('CAN NOT CONNECT TO DB');
 })
