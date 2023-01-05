@@ -30,4 +30,16 @@ Router.post('/add', (req, res)=>{
     })
 } )
 
+
+//find data
+Router.get('/show', (req, res)=>{
+     Member.find((err, docs)=>{
+        if(err) throw err;
+       
+        res.render('show', {
+            members: docs
+        })
+     })
+})
+
 module.exports = Router;
