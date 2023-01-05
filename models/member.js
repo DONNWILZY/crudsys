@@ -1,6 +1,6 @@
-const mongoos = require('mogoose');
-const schema = mongoos.Schema;
-let memberschema = new schema({
+const mongoose = require('mogoose');
+const schema = mongoose.Schema;
+let memberSchema = new schema({
     name: {
         type: String
     },
@@ -12,7 +12,7 @@ let memberschema = new schema({
     },
     password: {
         type: String
-    },
+    }
 })
 
-module.exports = mongoos.model('member', memberschema)
+module.exports = mongoose.model('member', memberSchema)

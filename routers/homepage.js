@@ -1,7 +1,8 @@
 const express = require('express');
 const Router = express.Router();
+const Member = require('../models/member')
 
-Router.use('/', (req,res)=>{
+Router.get('/', (err, res)=>{
     res.render('index')
 })
 
@@ -13,7 +14,7 @@ Router.post('/add', (req, res)=>{
 
     //console.log('')
 
-    const member = new member({
+    const member = new Member({
         name,
         email,
         username,
